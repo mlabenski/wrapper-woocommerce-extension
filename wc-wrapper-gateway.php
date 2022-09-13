@@ -163,7 +163,7 @@ function wrapper_init_gateway_class() {
 				}
 			}
 			echo $this->hpp_url;
-			$hppOrderFinal =  "https://".$this->hpp_url.".securepayments.cardpointe.com/pay?total=".$order->get_total()."&cf_woo_id=".$order->get_id()."&details=".$hppOrder;
+			$hppOrderFinal =  "https://".$this->hpp_url.".securepayments.cardpointe.com/pay?total=".$order->get_total()."&cf_hidden_woo_id=".$order->get_id()."&details=".$hppOrder;
 			$order->update_status('on-hold',__('Awaiting for Completed Payment', 'woocommerce'));
 
 			$woocommerce->cart->empty_cart();
